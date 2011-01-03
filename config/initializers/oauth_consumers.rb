@@ -41,12 +41,12 @@
 #   }
 # }
 # 
-#OAUTH_CREDENTIALS={
-#	:twitter=>{
-#     :key=>"laHbZLaY5KmkiEPTuP1JWw",
-#     :secret=>"XVcRARDRBSeVQX2hF0zkXmKzYBVhWOJyZ2qHXlkQU",
-#     :allow_login => true # Use :allow_login => true to allow user to login to account
-#	}
-#} unless defined? OAUTH_CREDENTIALS
+OAUTH_CREDENTIALS={
+	:twitter=>{
+     :key=>"laHbZLaY5KmkiEPTuP1JWw",
+     :secret=>"XVcRARDRBSeVQX2hF0zkXmKzYBVhWOJyZ2qHXlkQU",
+     :allow_login => true # Use :allow_login => true to allow user to login to account
+	}
+} unless defined? OAUTH_CREDENTIALS
 
-#load 'oauth/models/consumers/service_loader.rb'
+load 'oauth/models/consumers/service_loader.rb'
