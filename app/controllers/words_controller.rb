@@ -1,9 +1,11 @@
 class WordsController < ApplicationController
   def index
+	@title = "Latest"
     @words = Word.all
   end
 
   def new
+	@title = "New Definition"
     @word = Word.new
   end
 
