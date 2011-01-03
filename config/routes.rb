@@ -3,8 +3,9 @@ Threepeople::Application.routes.draw do
   resources :words
 
 	match '/about', :to => 'pages#about'
-	match '/', :to => 'pages#home'
 	match '/contact', :to => 'pages#contact'
+
+	root :to => 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
