@@ -1,11 +1,20 @@
 class WordsController < ApplicationController
   def index
-	@title = "Latest"
+		@title = "Latest"
     @words = Word.all
   end
 
   def new
-	@title = "New Definition"
+  	if @@client.authorized?
+  		@@access_token = client.authorize(
+  			@@request_token.token,
+  			@@request_token.secret,
+  			:oauth_verifier => params[:oauth_verifier]
+			)
+			@username = @@client.info["name"]
+		end
+  
+		@title = "New Definition"
     @word = Word.new
   end
 
