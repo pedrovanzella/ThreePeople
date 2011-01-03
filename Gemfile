@@ -7,6 +7,7 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "nifty-generators", :group => :development
+gem "twitter_oauth", :git => 'git://github.com/moomerman/twitter_oauth.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
