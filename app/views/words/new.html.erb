@@ -1,0 +1,25 @@
+<% title "New Word" %>
+
+<%= form_for @word do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :personone %><br />
+    <%= f.text_field :personone %>
+  </p>
+  <p>
+    <%= f.label :persontwo %><br />
+    <%= f.text_field :persontwo %>
+  </p>
+  <p>
+    <%= f.label :personthree %><br />
+    <%= f.text_field :personthree %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+
+
+<p><%= link_to "Back to List", words_path %></p>
