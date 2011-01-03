@@ -1,5 +1,5 @@
 module WordsHelper
 	def title(t)
-		t
+		return t
 	end
 end
