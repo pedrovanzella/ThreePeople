@@ -9,4 +9,4 @@
   	
 @@request_token = @@client.request_token(:oauth_callback => oauth_confirm_url)
   	
-@@request_token.authorize_url => https://api.twitter.com/oauth/authorize
+@@request_token.authorize_url => "https://api.twitter.com/oauth/authorize"
