@@ -111,11 +111,11 @@ footer nav {
   -webkit-border-radius: 10px;
   border-radius:         10px;
   text-align: center;
-  text-size: 150%;
+  font-size: 3em;
 }
 
 .checkbox {
-	font-size: 60%;
+	font-size: 0.3em;
 }
 
 /* new word */
