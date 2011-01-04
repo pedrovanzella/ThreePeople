@@ -4,6 +4,16 @@
 #   helper :layout
 module LayoutHelper
 
+  # Return a title on a per-page basis.
+  def title
+    base_title = "ThreePeople.me - Define a word with three people"
+    if @title.nil?
+      base_title
+    else
+      "#{base_title} | #{@title}"
+    end
+  end
+
   def show_title?
     @show_title
   end
