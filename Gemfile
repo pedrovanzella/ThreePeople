@@ -10,6 +10,7 @@ gem "nifty-generators", :group => :development
 gem "oauth-plugin", ">=0.4.0.pre1"
 gem "oauth", ">=0.4.4"
 gem "twitter"
+gem "json"
 
 # Use unicorn as the web server
 # gem 'unicorn'
