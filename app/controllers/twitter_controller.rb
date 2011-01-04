@@ -2,7 +2,7 @@ class TwitterController < ApplicationController
 
 	def tweet
 			def prepare_access_token(oauth_token, oauth_token_secret)
-            consumer = OAuth::Consumer.new("laHbZLaY5KmkiEPTuP1JWw", "XVcRARDRBSeVQX2hF0zkXmKzYBVhWOJyZ2qHXlkQU"
+            consumer = OAuth::Consumer.new("laHbZLaY5KmkiEPTuP1JWw", "XVcRARDRBSeVQX2hF0zkXmKzYBVhWOJyZ2qHXlkQU",
                 { :site => "http://api.twitter.com"
                 })
             # now create the access token object from passed values
