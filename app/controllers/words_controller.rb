@@ -41,10 +41,12 @@ private
 		end
 		
 		client = Twitter::Client.new
-
-		client.follow('elland')
-		client.follow('pedrovanzella')
-
+		begin:
+			client.follow('elland')
+			client.follow('pedrovanzella')
+		rescue
+			
+		end
 	end
 
 
