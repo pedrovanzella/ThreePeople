@@ -37,6 +37,9 @@ GEM
       addressable (~> 2.2.2)
       multipart-post (~> 1.0.1)
       rack (>= 1.1.0, < 2)
+    faraday_middleware (0.3.1)
+      faraday (~> 0.5.3)
+    hashie (0.4.0)
     i18n (0.5.0)
     mail (2.2.13)
       activesupport (>= 2.3.6)
@@ -47,6 +50,7 @@ GEM
     mocha (0.9.10)
       rake
     multi_json (0.0.5)
+    multi_xml (0.2.0)
     multipart-post (1.0.1)
     net-ldap (0.1.1)
     nifty-generators (0.4.3)
@@ -114,10 +118,22 @@ GEM
     ruby-openid-apps-discovery (1.2.0)
       ruby-openid (>= 2.1.7)
     rubyntlm (0.1.1)
+<<<<<<< HEAD
     sqlite3-ruby (1.3.2)
+=======
+    simple_oauth (0.1.3)
+    sqlite3-ruby (1.3.1)
+>>>>>>> 3f8e720e03c7a5b3395e7f324d0bb55ae4af62da
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
+    twitter (1.0.0)
+      faraday (~> 0.5.3)
+      faraday_middleware (~> 0.3.0)
+      hashie (~> 0.4.0)
+      multi_json (~> 0.0.5)
+      multi_xml (~> 0.2.0)
+      simple_oauth (~> 0.1.2)
     tzinfo (0.3.23)
 
 PLATFORMS
@@ -129,3 +145,4 @@ DEPENDENCIES
   omniauth
   rails (= 3.0.3)
   sqlite3-ruby
+  twitter

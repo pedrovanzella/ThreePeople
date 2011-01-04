@@ -1,4 +1,6 @@
 class WordsController < ApplicationController
+	before_filter :login_required
+	
   def index
 		@title = "Latest"
     @words = Word.all
