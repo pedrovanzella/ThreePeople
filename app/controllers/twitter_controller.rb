@@ -13,7 +13,7 @@ class TwitterController < ApplicationController
             return access_token
         end
 
-        auth = User.find_by_provider_and_uid(auth["provider"], auth["uid"])
+        auth = current_user
 
         # Exchange our oauth_token and oauth_token secret for the AccessToken instance.
         access_token = prepare_access_token(auth['token'], auth['secret'])
