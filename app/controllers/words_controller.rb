@@ -13,6 +13,7 @@ class WordsController < ApplicationController
 
   def create
     @word = Word.new(params[:word])
+		
     if @word.save
       flash[:notice] = "Successfully created word."
       redirect_to @word
