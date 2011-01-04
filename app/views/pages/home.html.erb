@@ -1,7 +1,7 @@
 <h2><%= title %></h2>
 <div>
-	<% if @current_user %>
-		<p>Welcome, <%= @current_user.name %>!</p>
+	<% if current_user %>
+		<p>Welcome, <%= current_user.name %>!</p>
 		<p><%= link_to "New Word", 'words/new' %>
 	<% else %>
 		<%= link_to "Sign in with Twitter", "/auth/twitter" %>
