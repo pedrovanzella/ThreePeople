@@ -13,7 +13,7 @@ class TwitterController < ApplicationController
             return access_token
         end
 
-        auth = current_user.authentications.find(:first, :conditions => { :provider => 'twitter' })
+        auth = current_user.users.find(:first, :conditions => { :provider => 'twitter' })
 
         # Exchange our oauth_token and oauth_token secret for the AccessToken instance.
         access_token = prepare_access_token(auth['token'], auth['secret'])
