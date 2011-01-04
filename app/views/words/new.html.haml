@@ -15,11 +15,12 @@
 			%small (Don't forget to pluralize)
 			%br
 			= f.text_field :name
-		%p
-			%input.submit{:type => "submit", :value => "YAY GO!"}
-	#douchebaggery
-		%input{:type => 'checkbox', :name => 'follow', :checked => true} 
-			Follow the creators?
-		%p
-			%input{:type => 'checkbox', :name => 'tweet', :checked => true} Tweet this?
+		.checkbox
+			%p
+				%input.submit{:type => "submit", :value => "YAY GO!"}
+		#douchebaggery
+			%input{:type => 'checkbox', :name => 'follow', :checked => true} 
+				Follow the creators?
+			%p
+				%input{:type => 'checkbox', :name => 'tweet', :checked => true} Tweet this?
 %p= link_to "Back to List", words_path
