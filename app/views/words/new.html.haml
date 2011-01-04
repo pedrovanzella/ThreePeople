@@ -18,8 +18,9 @@
 		%p
 			%input.submit{:type => "submit", :value => "YAY GO!"}
 	#douchebaggery
-		%input.checkbox{:type => 'checkbox', :name => 'follow', :checked => true} 
-			Follow the creators?
-		%p
-			%input.checkbox{:type => 'checkbox', :name => 'tweet', :checked => true} Tweet this?
+		%p.checkbox
+			%input{:type => 'checkbox', :name => 'follow', :checked => true} 
+				Follow the creators?
+		%p.checkbox
+			%input{:type => 'checkbox', :name => 'tweet', :checked => true} Tweet this?
 %p= link_to "Back to List", words_path
