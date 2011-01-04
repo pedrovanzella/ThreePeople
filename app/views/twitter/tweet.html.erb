@@ -1,5 +1,7 @@
 <h3><%= current_user %></h3>
 <p><%= current_user.to_yaml %></p>
+<h3><%= request.env["omniauth.auth"] %></h3>
+<p><%= request.env["omniauth.auth"].to_yaml %></p>
 <h3><%= @access_token %></h3>
 <p><%= @access_token.to_yaml %></p>
 <h3><%= @response %></h3>
