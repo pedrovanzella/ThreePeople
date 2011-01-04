@@ -10,18 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110104005536) do
+ActiveRecord::Schema.define(:version => 20110104013011) do
 
-  create_table "consumer_tokens", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "type",       :limit => 30
-    t.string   "token",      :limit => 1024
-    t.string   "secret"
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "consumer_tokens", ["token"], :name => "index_consumer_tokens_on_token", :unique => true
 
   create_table "words", :force => true do |t|
     t.string   "name"

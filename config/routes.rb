@@ -2,6 +2,8 @@ Threepeople::Application.routes.draw do
   
   resources :words
 
+	match "/auth/:provider/callback" => "sessions#create" 
+
 	match '/about', :to => 'pages#about'
 	match '/contact', :to => 'pages#contact'
 
