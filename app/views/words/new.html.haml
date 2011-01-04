@@ -1,0 +1,26 @@
+= title
+= form_for @word do |f|
+	= f.error_messages
+	#people
+		%h3 Who will you define?
+		%p
+			= f.text_field :personone
+		%p
+			= f.text_field :persontwo
+		%p
+			= f.text_field :personthree
+	#word
+		%h3 What do you think defines those three people? 
+		%p
+			= f.text_field :name
+			%small (Don't forget to pluralize)
+	%p= f.submit
+	#douchebaggery
+		%input{:type => 'checkbox', :name => 'follow', :checked => true} 
+			Follow the creators 
+			%a{:href => 'http://twitter.com/elland'} @elland 
+			and  
+			%a{:href => 'http://twitter.com/pedrovanzella'} @pedrovanzella?
+		%p
+			%input{:type => 'checkbox', :name => 'tweet', :checked => true} Tweet this?
+%p= link_to "Back to List", words_path

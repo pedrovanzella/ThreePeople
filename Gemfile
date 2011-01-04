@@ -10,6 +10,8 @@ gem "nifty-generators", :group => :development
 gem "omniauth"
 gem "twitter"
 
+gem "haml"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
