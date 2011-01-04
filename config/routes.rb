@@ -3,6 +3,7 @@ Threepeople::Application.routes.draw do
   resources :words
 
 	match "/auth/:provider/callback" => "sessions#create" 
+	match "/signout" => "sessions#destroy", :as => :signout
 
 	match '/about', :to => 'pages#about'
 	match '/contact', :to => 'pages#contact'
