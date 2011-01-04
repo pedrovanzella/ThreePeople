@@ -59,7 +59,7 @@ private
 		end
 		
 		client = Twitter::Client.new
-		client.update("I just said @#{params['word']['personone']}, @#{params['word']['persontwo']} and @#{params['word']['personon']} are all #{params['word']['name']}, at http://threepeople.me")
+		client.update("I just said @#{params['word']['personone']}, @#{params['word']['persontwo']} and @#{params['word']['personthree']} are all #{params['word']['name']}, at http://threepeople.me")
 		
 	end
 end
