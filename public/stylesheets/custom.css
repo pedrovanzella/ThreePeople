@@ -98,12 +98,24 @@ footer nav {
   float: none;
 }
 
-.title{
+.title {
 	text-align: center;
 }
 
-.content{
+.content {
 	text-align: center;
+}
+
+.submit {
+	-moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+  text-align: center;
+  text-size: 150%;
+}
+
+.checkbox {
+	font-size: 60%;
 }
 
 /* new word */
@@ -111,11 +123,11 @@ footer nav {
 	text-align: center;
 }
 
-#word{
+#word {
 	text-align: center;
 }
 
-#douchebaggery{
+#douchebaggery {
 	text-align: center;
 }
 
