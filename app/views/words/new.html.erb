@@ -2,23 +2,30 @@
 
 <%= form_for @word do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :personone %><br />
-    <%= f.text_field :personone %>
-  </p>
-  <p>
-    <%= f.label :persontwo %><br />
-    <%= f.text_field :persontwo %>
-  </p>
-  <p>
-    <%= f.label :personthree %><br />
-    <%= f.text_field :personthree %>
-  </p>
+
+  <div id="people">
+  	<h3> Who will you define? </h3>
+   <p>
+     <%= f.text_field :personone %>
+   </p>
+   <p>
+     <%= f.text_field :persontwo %>
+   </p>
+   <p>
+     <%= f.text_field :personthree %>
+   </p>
+  </div>
+  <div id="word">
+  	<h3> What do you think defines those three people? </h3>
+  	<p>
+   		<%= f.text_field :name %>
+  	</p>
+  </div>
   <p><%= f.submit %></p>
+  <div id="douchebaggery">
+  	<p> Follow the creators </p>
+  	<p> Tweet this </p>
+  </div>
 <% end %>
 
 
