@@ -16,6 +16,7 @@ class WordsController < ApplicationController
 		
     if @word.save
       flash[:notice] = "Successfully created word."
+			tweet(@word)
       redirect_to @word
     else
       render :action => 'new'
@@ -25,4 +26,18 @@ class WordsController < ApplicationController
   def show
     @word = Word.find(params[:id])
   end
+
+private
+	def tweet(w)
+		Twitter.configure do |config|
+		  config.consumer_key = "laHbZLaY5KmkiEPTuP1JWw"
+		  config.consumer_secret = "XVcRARDRBSeVQX2hF0zkXmKzYBVhWOJyZ2qHXlkQU"
+		  config.oauth_token = current_user.token
+		  config.oauth_token_secret = current_user.secret
+		end
+		
+		client = Twitter::Client.new
+		client.update("I just said @#{params['word']['personone']}, @#{params['word']['persontwo']} and @#{params['word']['personon']} are all #{params['word']['name']}, at http://threepeople.me")
+		
+	end
 end
