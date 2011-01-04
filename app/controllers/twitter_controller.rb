@@ -11,7 +11,7 @@ class TwitterController < ApplicationController
       :oauth_token => oauth_token,
     	:oauth_token_secret => oauth_token_secret
     }
-    access_token = OAuth::AccessToken.from_hash(consumer, token_hash )
+    access_token = OAuth::AccessToken.from_hash(consumer, token_hash)
     return access_token
 	end
 
