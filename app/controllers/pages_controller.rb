@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+		@word = Word.first
 	  @title = "Home"
 	end
 
