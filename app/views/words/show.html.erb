@@ -2,23 +2,25 @@
 	<%= title %>
 </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @word.name %>
-</p>
-<p>
-  <strong>Personone:</strong>
-  <%= @word.personone %>
-</p>
-<p>
-  <strong>Persontwo:</strong>
-  <%= @word.persontwo %>
-</p>
-<p>
-  <strong>Personthree:</strong>
-  <%= @word.personthree %>
-</p>
+<div class="content">
+	<p>
+  	<strong>Name:</strong>
+  	<%= @word.name %>
+	</p>
+	<p>
+ 	 <strong>Person One:</strong>
+ 	 <%= @word.personone %>
+	</p>
+	<p>
+  	<strong>Person Two:</strong>
+  	<%= @word.persontwo %>
+	</p>
+	<p>
+  	<strong>Person Three:</strong>
+  	<%= @word.personthree %>
+	</p>
 
-<p>
-  <%= link_to "View All", words_path %>
-</p>
+	<p>
+	  <%= link_to "View All", words_path %>
+	</p>
+</div>
