@@ -1,4 +1,4 @@
-= title
+.title= title
 = form_for @word do |f|
 	= f.error_messages
 	#people
@@ -12,15 +12,14 @@
 	#word
 		%h3 What do you think defines those three people? 
 		%p
-			= f.text_field :name
 			%small (Don't forget to pluralize)
-	%p= f.submit
+			%br
+			= f.text_field :name
+		%p
+			%input.submit{:type => "submit", :value => "YAY GO!"}
 	#douchebaggery
 		%input{:type => 'checkbox', :name => 'follow', :checked => true} 
-			Follow the creators 
-			%a{:href => 'http://twitter.com/elland'} @elland 
-			and  
-			%a{:href => 'http://twitter.com/pedrovanzella'} @pedrovanzella?
+			Follow the creators?
 		%p
 			%input{:type => 'checkbox', :name => 'tweet', :checked => true} Tweet this?
 %p= link_to "Back to List", words_path
