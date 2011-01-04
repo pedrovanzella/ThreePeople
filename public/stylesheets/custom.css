@@ -121,6 +121,17 @@ footer nav {
 	font-size: 10px;
 }
 
+#word{
+	font-size: 125%;
+	color: darkblue;
+}
+
+.word {
+	padding: 30px;
+	float: center;
+	font-size: 22px;
+}
+
 /* new word */
 #people {
 	text-align: center;

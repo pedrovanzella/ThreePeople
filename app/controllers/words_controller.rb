@@ -13,6 +13,11 @@ class WordsController < ApplicationController
 
   def create
     @word = Word.new(params[:word])
+		
+		@word.personone = params['word']['personone'].split(' ').join
+		@word.persontwo = params['word']['persontwo'].split(' ').join
+		@word.personthree = params['word']['personthree'].split(' ').join
+		
     if @word.save
       flash[:notice] = "Successfully created word."
 			if params['follow']

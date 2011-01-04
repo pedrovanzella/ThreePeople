@@ -1,6 +1,5 @@
 .title= title
 .content
-
 	- if current_user
 		%p
 			Welcome, #{current_user.name}!
@@ -8,3 +7,14 @@
 			= link_to "New Word", 'words/new'
 	- else
 		= link_to "Sign in with Twitter", "/auth/twitter"
+		%br
+
+.word
+	The last word entered was
+	%span#word= @word.name
+	and refered to 
+	%a{:href => "http://twitter.com/#{@word.personone}"}= "@" + @word.personone + ", " 
+	%a{:href => "http://twitter.com/#{@word.persontwo}"}= "@" + @word.persontwo
+	and 
+	%a{:href => "http://twitter.com/#{@word.personthree}"}= "@" + @word.personthree
+	!
