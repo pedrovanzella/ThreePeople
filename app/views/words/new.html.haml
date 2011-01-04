@@ -1,5 +1,4 @@
-#title
-	= title
+= title
 = form_for @word do |f|
 	= f.error_messages
 	#people
@@ -14,7 +13,7 @@
 		%h3 What do you think defines those three people? 
 		%p
 			= f.text_field :name
-			%small= (Don't forget to pluralize)
+			%small (Don't forget to pluralize)
 	%p= f.submit
 	#douchebaggery
 		%input{:type => 'checkbox', :name => 'follow', :checked => true} 
