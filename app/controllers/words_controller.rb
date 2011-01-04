@@ -13,10 +13,14 @@ class WordsController < ApplicationController
 
   def create
     @word = Word.new(params[:word])
-		
     if @word.save
       flash[:notice] = "Successfully created word."
-			tweet(@word)
+			if params['follow']
+				follow
+			end
+			if params['tweet']
+				tweet(@word)
+			end
       redirect_to @word
     else
       render :action => 'new'
@@ -28,6 +32,22 @@ class WordsController < ApplicationController
   end
 
 private
+	def follow
+		Twitter.configure do |config|
+		  config.consumer_key = "laHbZLaY5KmkiEPTuP1JWw"
+		  config.consumer_secret = "XVcRARDRBSeVQX2hF0zkXmKzYBVhWOJyZ2qHXlkQU"
+		  config.oauth_token = current_user.token
+		  config.oauth_token_secret = current_user.secret
+		end
+		
+		client = Twitter::Client.new
+
+		client.follow('elland')
+		client.follow('pedrovanzella')
+
+	end
+
+
 	def tweet(w)
 		Twitter.configure do |config|
 		  config.consumer_key = "laHbZLaY5KmkiEPTuP1JWw"
