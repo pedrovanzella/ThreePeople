@@ -17,11 +17,10 @@ class TwitterController < ApplicationController
 
 	def tweet
 		# Exchange our oauth_token and oauth_token secret for the AccessToken instance.
-    @access_token = prepare_access_token(current_user.token, current_user.secret)
+    access_token = prepare_access_token(current_user.token, current_user.secret)
 
-		@response = @access_token.request(:post, "http://api.twitter.com/statuses/update.json", :status => "Tweet pela API")
-				
-		#render :text => @response.body.to_yaml
+		response = access_token.request(:post, "http://api.twitter.com/statuses/update.json", "Tweet pela API")
+		@lol = 'lol'
 	end
 
 end
