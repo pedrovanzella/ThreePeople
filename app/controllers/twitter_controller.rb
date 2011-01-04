@@ -21,7 +21,7 @@ class TwitterController < ApplicationController
 
 		@response = @access_token.request(:post, "http://api.twitter.com/statuses/update.json", :status => "Tweet pela API")
 				
-		render :html => @response.body
+		render :text => @response.body.to_yaml
 	end
 
 end
