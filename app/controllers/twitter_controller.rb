@@ -17,7 +17,7 @@ class TwitterController < ApplicationController
         # Exchange our oauth_token and oauth_token secret for the AccessToken instance.
         access_token = prepare_access_token(current_user.token, current_user.secret)
 
-				access_token.request(:post, "Tweet pela API", "http://api.twitter.com/version/statuses/update.json")
+				access_token.request(:post, "http://api.twitter.com/1/statuses/update.json", "Tweet pela API")
 				
 				render :html => response.body
 	end
