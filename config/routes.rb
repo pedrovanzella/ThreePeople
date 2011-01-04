@@ -7,6 +7,8 @@ Threepeople::Application.routes.draw do
 
 	match '/about', :to => 'pages#about'
 	match '/contact', :to => 'pages#contact'
+	
+	match '/tweet', :to => 'twitter#tweet'
 
 	root :to => 'pages#home'
 
