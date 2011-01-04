@@ -98,7 +98,15 @@ footer nav {
   float: none;
 }
 
-/* new word
+.title{
+	text-align: center;
+}
+
+.content{
+	text-align: center;
+}
+
+/* new word */
 #people {
 	text-align: center;
 }
