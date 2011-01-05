@@ -16,7 +16,7 @@ class WordsController < ApplicationController
 		
 		@word.personone = params['word']['personone'].split(' ').join
 		@word.persontwo = params['word']['persontwo'].split(' ').join
-		@word.personone = params['word']['personthree'].split(' ').join
+		@word.personthree = params['word']['personthree'].split(' ').join
 		
     if @word.save
       flash[:notice] = "Successfully created word."
